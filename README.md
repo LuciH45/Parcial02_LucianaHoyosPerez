@@ -11,3 +11,22 @@ Después de calcular el número, su factorial y si es par o impar, el microservi
   "tipo": "impar",
   "fecha": "2025-11-10T18:55:00"
 }
+```
+Para implementar esta comunicación, podría usarse la librería requests en Flask:
+``` python 
+import requests
+
+requests.post("http://historial-service:5000/api/historial", json=respuesta)
+
+```
+Además, la URL del servicio externo se almacenaría en una variable de entorno (por ejemplo, mediante un archivo .env) para mantener la configuración desacoplada y fácilmente modificable.
+
+En resumen, se separarían responsabilidades:
+
+- Microservicio A: realiza los cálculos.
+
+- Microservicio B: guarda el historial en la base de datos.
+
+La comunicación sería a través de HTTP REST (POST), se usarían variables de entorno para configurar direcciones o puertos.
+
+Esto mantiene la modularidad, escalabilidad y bajo acoplamiento, principios clave de los microservicios.
