@@ -30,3 +30,19 @@ En resumen, se separarían responsabilidades:
 La comunicación sería a través de HTTP REST (POST), se usarían variables de entorno para configurar direcciones o puertos.
 
 Esto mantiene la modularidad, escalabilidad y bajo acoplamiento, principios clave de los microservicios.
+
+### Para ejecutar sigue los siguientes pasos
+1. Descarga Flask
+   ``` bash
+      pip install flask
+   ```
+2. Ejecuta la app
+    ``` bash
+      py app.py
+   ```
+3. Entra al navegador y ve a:
+   
+http://127.0.0.1:5000/numero/5
+
+
+
